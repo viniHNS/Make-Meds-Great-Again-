@@ -1,0 +1,17 @@
+{
+  "carKitHP": 250,
+  "salewaHP": 450,
+  "ifakHP": 400,
+  "afakHP": 420,
+  "grizzlyHP": 2250,
+  "ai2HP": 150,
+
+  "calocUsage": 5,
+  "armyBandageUsage": 4,
+  "analginPainkillersUsage": 10,
+  "augmentinUsage": 15,
+  "ibuprofenUsage": 20,
+
+  "GrizzlyCanDoSurgery": true,
+  "GrizzlySurgeryCost": 550
+}
