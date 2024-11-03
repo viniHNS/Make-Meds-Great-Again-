@@ -19,8 +19,7 @@ It enhances existing medical kits.
 
 ## Installation
 
-Simply place the `user` folder into your `SPT` game installation directory.
-
+Simply place the `user` and `BepInEx` folder into your `SPT` game installation directory.
 
 ## TO DO
 
