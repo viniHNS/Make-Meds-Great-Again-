@@ -1,4 +1,4 @@
-# Make Meds Great Again - Server!
+# Make Meds Great Again! - Server
 
 #### [EN](README.md) | [PT_BR](README_BR.md)
 
