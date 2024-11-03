@@ -185,7 +185,7 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
 
         }
 
-        logger.logWithColor("[Making the shotguns great again!] Database: Loading complete.", LogTextColor.GREEN);
+        logger.logWithColor("[Making the meds great again!] Loading complete.", LogTextColor.GREEN);
 
     }
 
