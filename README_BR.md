@@ -20,7 +20,7 @@ Melhora os kits médicos existentes
 
 ## Instalação
 
-Basta colocar a pasta `user` no diretório de instalação do seu jogo `SPT`.
+Basta colocar a pasta `user` e `BepInEx` no diretório de instalação do seu jogo `SPT`.
 
 ## Licença
 
