@@ -1,5 +1,6 @@
 # Make Meds Great Again! - Server
 
+#### [Client side / Plugin](https://github.com/viniHNS/Make-Meds-Great-Again-Client)
 #### [EN](README.md) | [PT_BR](README_BR.md)
 
 ## What is this?
