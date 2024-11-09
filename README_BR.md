@@ -17,7 +17,6 @@ Melhora os kits médicos existentes
 - Paracetamol
 ###### Diminui a temperatura do PMC por um pequeno tempo e também remove dor por um pequeno tempo com um pequeno delay
 
-
 ## Instalação
 
 Basta colocar a pasta `user` e `BepInEx` no diretório de instalação do seu jogo `SPT`.
