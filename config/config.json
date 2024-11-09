@@ -11,6 +11,11 @@
   "analginPainkillersUsage": 10,
   "augmentinUsage": 15,
   "ibuprofenUsage": 20,
+  "vaselinUsage": 10,
+  "goldenStarUsage": 15,
+  "aluminiumSplintUsage": 10,
+  "survivalKitUsage": 15,
+  "cmsUsage": 10,
 
   "GrizzlyCanDoSurgery": true,
   "GrizzlySurgeryCost": 550
