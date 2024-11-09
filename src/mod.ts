@@ -43,6 +43,12 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
         const analginPainkillersUsage = config.analginPainkillersUsage;
         const augmentinUsage = config.augmentinUsage;
         const ibuprofenUsage = config.ibuprofenUsage;
+        const vaselinUsage = config.vaselinUsage;
+        const goldenStarUsage = config.goldenStarUsage;
+        const aluminiumSplintUsage = config.aluminiumSplintUsage;
+        const cmsUsage = config.cmsUsage;
+        const survivalKitUsage = config.survivalKitUsage;
+
 
         // Find the meds item by its Id (thanks NoNeedName)
         const carKit = tables.templates.items[idHelper.CAR_FIRST_AID];
@@ -57,6 +63,13 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
         const analginPainkillers = tables.templates.items[idHelper.ANALGIN];
         const augmentin = tables.templates.items[idHelper.AUGMENTIN];
         const ibuprofen = tables.templates.items[idHelper.IBUPROFEN];
+        const vaselin = tables.templates.items[idHelper.VASELIN];
+        const goldenStar = tables.templates.items[idHelper.GOLDEN_STAR];
+
+        const aluminiumSplint = tables.templates.items[idHelper.ALUMINIUM_SPLINT];
+
+        const survivalKit = tables.templates.items[idHelper.SURVIVAL_KIT];
+        const cms = tables.templates.items[idHelper.CMS];
 
         
         // Changes --------------------------------------------------------------------
@@ -82,6 +95,13 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
         analginPainkillers._props.MaxHpResource = analginPainkillersUsage;
         augmentin._props.MaxHpResource = augmentinUsage;
         ibuprofen._props.MaxHpResource = ibuprofenUsage;
+
+        vaselin._props.MaxHpResource = vaselinUsage;
+        goldenStar._props.MaxHpResource = goldenStarUsage;
+        aluminiumSplint._props.MaxHpResource = aluminiumSplintUsage;
+        cms._props.MaxHpResource = cmsUsage;
+        survivalKit._props.MaxHpResource = survivalKitUsage;
+        
         // ----------------------------------------------------------------------------
 
 
