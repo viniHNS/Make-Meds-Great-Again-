@@ -126,32 +126,132 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
 
         if (config.grizzlyChanges) {
             applyChanges(grizzly, config, "Grizzly");
+        } else {
+            grizzly._props.effects_damage["LightBleeding"] = {
+                delay: 0,
+                duration: 0,
+                fadeOut: 0,
+                cost: 40
+            },
+            grizzly._props.effects_damage["HeavyBleeding"] = {
+                delay: 0,
+                duration: 0,
+                fadeOut: 0,
+                cost: 130
+            },
+            grizzly._props.effects_damage["Fracture"] = {
+                delay: 0,
+                duration: 0,
+                fadeOut: 0,
+                cost: 50
+            },
+            grizzly._props.effects_damage["Contusion"] = {
+                delay: 0,
+                duration: 0,
+                fadeOut: 0,
+                cost: 0
+            },
+            grizzly._props.effects_damage["RadExposure"] = {
+                delay: 0,
+                duration: 0,
+                fadeOut: 0,
+                cost: 0
+            }
+            grizzly._props.MaxHpResource = 1800;
         }
         
         if (config.ai2Changes) {
             applyChanges(ai2, config, "ai2");
+        } else {
+            ai2._props.effects_damage["RadExposure"] = {
+                delay: 0,
+                duration: 0,
+                fadeOut: 0,
+                cost: 0
+            }
+            ai2._props.MaxHpResource = 100;
         }
         
         if (config.carKitChanges) {
             applyChanges(carKit, config, "carKit");
+        } else {
+            carKit._props.effects_damage["LightBleeding"] = {
+                delay: 0,
+                duration: 0,
+                fadeOut: 0,
+                cost: 50
+            }
+            carKit._props.MaxHpResource = 220;
         }
         
         if (config.salewaChanges) {
             applyChanges(salewa, config, "salewa");
+        } else {
+            salewa._props.effects_damage["LightBleeding"] = {
+                delay: 0,
+                duration: 0,
+                fadeOut: 0,
+                cost: 45
+            },
+            salewa._props.effects_damage["HeavyBleeding"] = {
+                delay: 0,
+                duration: 0,
+                fadeOut: 0,
+                cost: 175
+            },
+            salewa._props.MaxHpResource = 400;
         }
         
         if (config.ifakChanges) {
             applyChanges(ifak, config, "ifak");
+        } else {
+            ifak._props.effects_damage["LightBleeding"] = {
+                delay: 0,
+                duration: 0,
+                fadeOut: 0,
+                cost: 30
+            },
+            ifak._props.effects_damage["HeavyBleeding"] = {
+                delay: 0,
+                duration: 0,
+                fadeOut: 0,
+                cost: 210
+            },
+            ifak._props.effects_damage["RadExposure"] = {
+                delay: 0,
+                duration: 0,
+                fadeOut: 0,
+                cost: 0
+            }
+            ifak._props.MaxHpResource = 300;
         }
         
         if (config.afakChanges) {
             applyChanges(afak, config, "afak");
+        } else {
+            afak._props.effects_damage["LightBleeding"] = {
+                delay: 0,
+                duration: 0,
+                fadeOut: 0,
+                cost: 30
+            },
+            afak._props.effects_damage["HeavyBleeding"] = {
+                delay: 0,
+                duration: 0,
+                fadeOut: 0,
+                cost: 170
+            },
+            afak._props.effects_damage["RadExposure"] = {
+                delay: 0,
+                duration: 0,
+                fadeOut: 0,
+                cost: 0
+            }
+            afak._props.MaxHpResource = 400;
         }
         
         // ----------------------------------------------------------------------------
 
-
-        
         // Thanks TRON <3
         const logger = container.resolve<ILogger>("WinstonLogger");
         const db = container.resolve<DatabaseServer>("DatabaseServer").getTables();
