@@ -31,23 +31,54 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
         // Get all the in-memory json found in /assets/database
         const tables = databaseServer.getTables();
 
-        const carKitHP = config.carKitHP;
-        const salewaHP = config.salewaHP;
-        const ifakHP = config.ifakHP;
-        const afakHP = config.afakHP;
-        const grizzlyHP = config.grizzlyHP;
-        const ai2HP = config.ai2HP;
+        function setEffectDamage(item: any, effect: string, configKey: string, config: any): void {
+            if (config[configKey]) {
+                item._props.effects_damage[effect] = {
+                    delay: 0,
+                    duration: 0,
+                    fadeOut: 0,
+                    cost: config[configKey]
+                };
+            }
+        }
+    
+        function setSurgeryEffect(item: any, configKey: string, config: any): void {
+            if (config[configKey]) {
+                item._props.effects_damage["DestroyedPart"] = {
+                    delay: 0,
+                    duration: 0,
+                    fadeOut: 0,
+                    healthPenaltyMin: 60,
+                    healthPenaltyMax: 72,
+                    cost: config[configKey]
+                };
+            }
+        }
+    
+        function applyChanges(item: any, config: any, prefix: string): void {
+            setEffectDamage(item, "Fracture", `${prefix}FractureHealCost`, config);
+            setSurgeryEffect(item, `${prefix}SurgeryCost`, config);
+            setEffectDamage(item, "HeavyBleeding", `${prefix}HeavyBleedingHealCost`, config);
+            setEffectDamage(item, "LightBleeding", `${prefix}LightBleedingHealCost`, config);
+        }
 
-        const calocUsage = config.calocUsage;
-        const armyBandageUsage = config.armyBandageUsage;
-        const analginPainkillersUsage = config.analginPainkillersUsage;
-        const augmentinUsage = config.augmentinUsage;
-        const ibuprofenUsage = config.ibuprofenUsage;
-        const vaselinUsage = config.vaselinUsage;
-        const goldenStarUsage = config.goldenStarUsage;
-        const aluminiumSplintUsage = config.aluminiumSplintUsage;
-        const cmsUsage = config.cmsUsage;
-        const survivalKitUsage = config.survivalKitUsage;
+        const carKitHP: number = config.carKitHP;
+        const salewaHP: number = config.salewaHP;
+        const ifakHP: number = config.ifakHP;
+        const afakHP: number = config.afakHP;
+        const grizzlyHP: number = config.grizzlyHP;
+        const ai2HP: number = config.ai2HP;
+    
+        const calocUsage: number = config.calocUsage;
+        const armyBandageUsage: number = config.armyBandageUsage;
+        const analginPainkillersUsage: number = config.analginPainkillersUsage;
+        const augmentinUsage: number = config.augmentinUsage;
+        const ibuprofenUsage: number = config.ibuprofenUsage;
+        const vaselinUsage: number = config.vaselinUsage;
+        const goldenStarUsage: number = config.goldenStarUsage;
+        const aluminiumSplintUsage: number = config.aluminiumSplintUsage;
+        const cmsUsage: number = config.cmsUsage;
+        const survivalKitUsage: number = config.survivalKitUsage;
 
 
         // Find the meds item by its Id (thanks NoNeedName)
@@ -78,16 +109,6 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
         ifak._props.MaxHpResource = ifakHP;
         afak._props.MaxHpResource = afakHP;
         grizzly._props.MaxHpResource = grizzlyHP;
-        if(config.GrizzlyCanDoSurgery){
-            grizzly._props.effects_damage["DestroyedPart"] = {
-                "delay": 0,
-                "duration": 0,
-                "fadeOut": 0,
-                "healthPenaltyMin": 60,
-                "healthPenaltyMax": 72,
-                "cost": config.GrizzlySurgeryCost,
-            }
-        }
         ai2._props.MaxHpResource = ai2HP;
 
         calocB._props.MaxHpResource = calocUsage;
@@ -101,6 +122,31 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
         aluminiumSplint._props.MaxHpResource = aluminiumSplintUsage;
         cms._props.MaxHpResource = cmsUsage;
         survivalKit._props.MaxHpResource = survivalKitUsage;
+
+
+        if (config.grizzlyChanges) {
+            applyChanges(grizzly, config, "Grizzly");
+        }
+        
+        if (config.ai2Changes) {
+            applyChanges(ai2, config, "ai2");
+        }
+        
+        if (config.carKitChanges) {
+            applyChanges(carKit, config, "carKit");
+        }
+        
+        if (config.salewaChanges) {
+            applyChanges(salewa, config, "salewa");
+        }
+        
+        if (config.ifakChanges) {
+            applyChanges(ifak, config, "ifak");
+        }
+        
+        if (config.afakChanges) {
+            applyChanges(afak, config, "afak");
+        }
         
         // ----------------------------------------------------------------------------
 
