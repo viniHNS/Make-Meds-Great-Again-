@@ -388,6 +388,28 @@ export class IDHelper
     public SJ9 = "5fca13ca637ee0341a484f46";
     public SJ12 = "637b612fb7afa97bfc3d7005";
     
+    //Weapons
+        //Pistols
+    public APS = "5a17f98cfcdbcb0980087290";
+    public APB = "5abccb7dd8ce87001773e277";
+    public PB = "56e0598dd2720bb5668b45a6";
+    public PM = "5448bd6b4bdc2dfc2f8b4569";
+    public PM_t = "579204f224597773d619e051"
+    public TT = "571a12c42459771f627b58a0";
+    public GOLDEN_TT = "5b3b713c5acfc4330140bd8d";
+    public MP_433_GRACH = "576a581d2459771e7b1bc4f1";
+    public SR_1MP = "59f98b4986f7746f546d2cef";
+    public GLOCK_17 = "5a7ae0c351dfba0017554310";
+    public GLOCK_18C = "5b1fa9b25acfc40018633c01";
+    public GLOCK_19X = "63088377b5cd696784087147";
+    public M1911A1 = "5e81c3cbac2bb513793cdc75";
+    public M45A1 = "5f36a0e5fbf956000b716b65";
+    public FN57 = "5d3eb3b0a4b93615055e84d2";
+    public FN57_FDE = "5d67abc1a4b93614ec50137f";
+    public P226R = "56d59856d2720bd8418b456a";
+    public M9A3 = "5cadc190ae921500103bb3b6";
+    public PL_15 = "602a9740da11d6478d5a06dc";
+    public USP = "6193a720f8ee7e52e42109ed";
     
     
 
