@@ -11,6 +11,7 @@ import path from "path";
 import { IDHelper } from "./IDHelper";
 import config from "../config/config.json"
 import paracetamol from "../db/buffs/paracetamol.json"
+import exodrine from "../db/buffs/exodrine.json"
 
 class Mod implements IPostDBLoadMod, IPreSptLoadMod
 {
@@ -23,6 +24,7 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
 
     public postDBLoad(container: DependencyContainer): void 
     {
+        const logger2 = container.resolve<ILogger>("WinstonLogger");
         // get database from server
         const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
 
@@ -126,6 +128,7 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
 
         if (config.grizzlyChanges) {
             applyChanges(grizzly, config, "Grizzly");
+            logger2.logWithColor(`Changing Grizzly`, LogTextColor.GREEN);
         } else {
             grizzly._props.effects_damage["LightBleeding"] = {
                 delay: 0,
@@ -158,10 +161,12 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
                 cost: 0
             }
             grizzly._props.MaxHpResource = 1800;
+            logger2.logWithColor(`Grizzly set to default`, LogTextColor.GREEN);
         }
         
         if (config.ai2Changes) {
             applyChanges(ai2, config, "ai2");
+            logger2.logWithColor(`Changing AI-2`, LogTextColor.GREEN);
         } else {
             ai2._props.effects_damage["RadExposure"] = {
                 delay: 0,
@@ -170,10 +175,12 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
                 cost: 0
             }
             ai2._props.MaxHpResource = 100;
+            logger2.logWithColor(`AI-2 set to default`, LogTextColor.GREEN);
         }
         
         if (config.carKitChanges) {
             applyChanges(carKit, config, "carKit");
+            logger2.logWithColor(`Changing Car First Aid Kit`, LogTextColor.GREEN);
         } else {
             carKit._props.effects_damage["LightBleeding"] = {
                 delay: 0,
@@ -182,10 +189,12 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
                 cost: 50
             }
             carKit._props.MaxHpResource = 220;
+            logger2.logWithColor(`Car First Aid Kit set to default`, LogTextColor.GREEN);
         }
         
         if (config.salewaChanges) {
             applyChanges(salewa, config, "salewa");
+            logger2.logWithColor(`Changing Salewa`, LogTextColor.GREEN);
         } else {
             salewa._props.effects_damage["LightBleeding"] = {
                 delay: 0,
@@ -200,10 +209,12 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
                 cost: 175
             },
             salewa._props.MaxHpResource = 400;
+            logger2.logWithColor(`Salewa set to default`, LogTextColor.GREEN);
         }
         
         if (config.ifakChanges) {
             applyChanges(ifak, config, "ifak");
+            logger2.logWithColor(`Changing IFAK`, LogTextColor.GREEN);
         } else {
             ifak._props.effects_damage["LightBleeding"] = {
                 delay: 0,
@@ -224,10 +235,12 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
                 cost: 0
             }
             ifak._props.MaxHpResource = 300;
+            logger2.logWithColor(`IFAK set to default`, LogTextColor.GREEN);
         }
         
         if (config.afakChanges) {
             applyChanges(afak, config, "afak");
+            logger2.logWithColor(`Changing AFAK`, LogTextColor.GREEN);
         } else {
             afak._props.effects_damage["LightBleeding"] = {
                 delay: 0,
@@ -248,6 +261,7 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
                 cost: 0
             }
             afak._props.MaxHpResource = 400;
+            logger2.logWithColor(`AFAK set to default`, LogTextColor.GREEN);
         }
         
         // ----------------------------------------------------------------------------
@@ -271,8 +285,10 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
         const buffs = db.globals.config.Health.Effects.Stimulator.Buffs
 
         //ID buff paracetamol -> 67150653e2809bdac7054f97
+        //ID buff exodrine    -> 67352799ac0f173f618601ff
 
         buffs["67150653e2809bdac7054f97"] = paracetamol;
+        buffs["67352799ac0f173f618601ff"] = exodrine;
 
 
         for(const itemFile in mydb.templates.items) {
