@@ -106,26 +106,7 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
 
         
         // Changes --------------------------------------------------------------------
-        carKit._props.MaxHpResource = carKitHP;
-        salewa._props.MaxHpResource = salewaHP;
-        ifak._props.MaxHpResource = ifakHP;
-        afak._props.MaxHpResource = afakHP;
-        grizzly._props.MaxHpResource = grizzlyHP;
-        ai2._props.MaxHpResource = ai2HP;
-
-        calocB._props.MaxHpResource = calocUsage;
-        armyBandages._props.MaxHpResource = armyBandageUsage;
-        analginPainkillers._props.MaxHpResource = analginPainkillersUsage;
-        augmentin._props.MaxHpResource = augmentinUsage;
-        ibuprofen._props.MaxHpResource = ibuprofenUsage;
-
-        vaselin._props.MaxHpResource = vaselinUsage;
-        goldenStar._props.MaxHpResource = goldenStarUsage;
-        aluminiumSplint._props.MaxHpResource = aluminiumSplintUsage;
-        cms._props.MaxHpResource = cmsUsage;
-        survivalKit._props.MaxHpResource = survivalKitUsage;
-
-
+        
         if (config.grizzlyChanges) {
             applyChanges(grizzly, config, "Grizzly");
             logger2.logWithColor(`[Making Meds Great Again!] Changing Grizzly`, LogTextColor.GREEN);
@@ -263,6 +244,25 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
             afak._props.MaxHpResource = 400;
             logger2.logWithColor(`[Making Meds Great Again!] AFAK set to default`, LogTextColor.GREEN);
         }
+
+        carKit._props.MaxHpResource = carKitHP;
+        salewa._props.MaxHpResource = salewaHP;
+        ifak._props.MaxHpResource = ifakHP;
+        afak._props.MaxHpResource = afakHP;
+        grizzly._props.MaxHpResource = grizzlyHP;
+        ai2._props.MaxHpResource = ai2HP;
+
+        calocB._props.MaxHpResource = calocUsage;
+        armyBandages._props.MaxHpResource = armyBandageUsage;
+        analginPainkillers._props.MaxHpResource = analginPainkillersUsage;
+        augmentin._props.MaxHpResource = augmentinUsage;
+        ibuprofen._props.MaxHpResource = ibuprofenUsage;
+
+        vaselin._props.MaxHpResource = vaselinUsage;
+        goldenStar._props.MaxHpResource = goldenStarUsage;
+        aluminiumSplint._props.MaxHpResource = aluminiumSplintUsage;
+        cms._props.MaxHpResource = cmsUsage;
+        survivalKit._props.MaxHpResource = survivalKitUsage;
         
         // ----------------------------------------------------------------------------
 
