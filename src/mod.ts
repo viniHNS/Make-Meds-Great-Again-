@@ -109,6 +109,7 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
         
         if (config.grizzlyChanges) {
             applyChanges(grizzly, config, "Grizzly");
+            grizzly._props.MaxHpResource = grizzlyHP;
             logger2.logWithColor(`[Making Meds Great Again!] Changing Grizzly`, LogTextColor.GREEN);
         } else {
             grizzly._props.effects_damage["LightBleeding"] = {
@@ -147,6 +148,7 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
         
         if (config.ai2Changes) {
             applyChanges(ai2, config, "ai2");
+            ai2._props.MaxHpResource = ai2HP;
             logger2.logWithColor(`[Making Meds Great Again!] Changing AI-2`, LogTextColor.GREEN);
         } else {
             ai2._props.effects_damage["RadExposure"] = {
@@ -161,6 +163,7 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
         
         if (config.carKitChanges) {
             applyChanges(carKit, config, "carKit");
+            carKit._props.MaxHpResource = carKitHP;
             logger2.logWithColor(`[Making Meds Great Again!] Changing Car First Aid Kit`, LogTextColor.GREEN);
         } else {
             carKit._props.effects_damage["LightBleeding"] = {
@@ -175,6 +178,7 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
         
         if (config.salewaChanges) {
             applyChanges(salewa, config, "salewa");
+            salewa._props.MaxHpResource = salewaHP;
             logger2.logWithColor(`[Making Meds Great Again!] Changing Salewa`, LogTextColor.GREEN);
         } else {
             salewa._props.effects_damage["LightBleeding"] = {
@@ -195,6 +199,7 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
         
         if (config.ifakChanges) {
             applyChanges(ifak, config, "ifak");
+            ifak._props.MaxHpResource = ifakHP;
             logger2.logWithColor(`[Making Meds Great Again!] Changing IFAK`, LogTextColor.GREEN);
         } else {
             ifak._props.effects_damage["LightBleeding"] = {
@@ -221,6 +226,7 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
         
         if (config.afakChanges) {
             applyChanges(afak, config, "afak");
+            afak._props.MaxHpResource = afakHP;
             logger2.logWithColor(`[Making Meds Great Again!] Changing AFAK`, LogTextColor.GREEN);
         } else {
             afak._props.effects_damage["LightBleeding"] = {
@@ -244,13 +250,6 @@ class Mod implements IPostDBLoadMod, IPreSptLoadMod
             afak._props.MaxHpResource = 400;
             logger2.logWithColor(`[Making Meds Great Again!] AFAK set to default`, LogTextColor.GREEN);
         }
-
-        carKit._props.MaxHpResource = carKitHP;
-        salewa._props.MaxHpResource = salewaHP;
-        ifak._props.MaxHpResource = ifakHP;
-        afak._props.MaxHpResource = afakHP;
-        grizzly._props.MaxHpResource = grizzlyHP;
-        ai2._props.MaxHpResource = ai2HP;
 
         calocB._props.MaxHpResource = calocUsage;
         armyBandages._props.MaxHpResource = armyBandageUsage;
