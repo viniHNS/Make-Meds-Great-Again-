@@ -4,7 +4,7 @@
     "Chance": 1,
     "Delay": 1,
     "Duration": 300,
-    "Value": 5,
+    "Value": 6,
     "AbsoluteValue": true,
     "SkillName": ""
   },
@@ -76,7 +76,7 @@
     "BuffType": "EnergyRate",
     "Chance": 1,
     "Delay": 306,
-    "Duration": 180,
+    "Duration": 120,
     "SkillName": "",
     "Value": -2
   },
@@ -85,7 +85,7 @@
     "BuffType": "HydrationRate",
     "Chance": 1,
     "Delay": 120,
-    "Duration": 306,
+    "Duration": 240,
     "SkillName": "",
     "Value": -2
   },
