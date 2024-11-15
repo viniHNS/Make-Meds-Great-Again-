@@ -1,11 +1,4 @@
 {
-  "carKitHP": 250,
-  "salewaHP": 450,
-  "ifakHP": 400,
-  "afakHP": 420,
-  "grizzlyHP": 2250,
-  "ai2HP": 200,
-
   "calocUsage": 5,
   "armyBandageUsage": 4,
   "analginPainkillersUsage": 10,
@@ -18,6 +11,7 @@
   "cmsUsage": 10,
 
   "grizzlyChanges": true,
+  "grizzlyHP": 2250,
   "GrizzlyCanDoSurgery": true,
   "GrizzlySurgeryCost": 550,
   "GrizzlyCanHealHeavyBleeding": true,
@@ -28,6 +22,7 @@
   "GrizzlyFractureHealCost": 200,
   
   "carKitChanges": true,
+  "carKitHP": 250,
   "carKitCanHealFractures": true,
   "carKitFractureHealCost": 100,
   "carKitCanDoSurgery": true,
@@ -38,6 +33,7 @@
   "carKitLightBleedingHealCost": 50,
 
   "salewaChanges": true,
+  "salewaHP": 450,
   "salewaCanHealFractures": true,
   "salewaFractureHealCost": 100,
   "salewaCanDoSurgery": true,
@@ -48,6 +44,7 @@
   "salewaLightBleedingHealCost": 40,
 
   "ifakChanges": true,
+  "ifakHP": 400,
   "ifakCanHealFractures": true,
   "ifakFractureHealCost": 180,
   "ifakCanDoSurgery": true,
@@ -58,6 +55,7 @@
   "ifakLightBleedingHealCost": 30,
 
   "afakChanges": true,
+  "afakHP": 420,
   "afakCanHealFractures": true,
   "afakFractureHealCost": 180,
   "afakCanDoSurgery": true,
@@ -68,6 +66,7 @@
   "afakLightBleedingHealCost": 30,
 
   "ai2Changes": true,
+  "ai2HP": 200,
   "ai2CanHealFractures": true,
   "ai2FractureHealCost": 100,
   "ai2CanDoSurgery": true,
